@@ -11,4 +11,7 @@ router.route('/controller')
   .get(ExampleController.example)
   .post(ExampleController.usingModel);
 
+router.route('/users')
+  .get(ExampleController.exampleUser)
+
 module.exports = router;

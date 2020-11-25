@@ -1,4 +1,4 @@
-const ExampleModel = require('../models/ExampleModel')
+const ExampleModel = require('../models/ExampleModel');
 
 class ExampleController {
   async example(request, response) {
@@ -11,6 +11,12 @@ class ExampleController {
     const user = new ExampleModel(name, age, course);
 
     return response.json(user)
+  }
+
+  async exampleUser(request, response) {
+    const user = new ExampleModel("daniel", 22, "abi");
+
+    return response.json(user);
   }
 }
 
